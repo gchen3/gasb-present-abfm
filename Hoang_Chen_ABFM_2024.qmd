@@ -1,0 +1,123 @@
+---
+title: "The Impact of GASB 67 & 68 on Pension Plan Discount Rates and Unfunded Liabilities"
+author: 
+  - name: Trang Hoang
+  - name: Gang Chen
+date: "September 26, 2024"
+format: 
+  beamer:
+    theme: CambridgeUS
+    colortheme: beaver
+subtitle: "Sponsored by GASB Gil Crain Research Grant"
+---
+
+## Background about GASB 67 and 68
+-   Statements 67 and 68 establish standards for measuring and recognizing net pension liabilities, enhancing the transparency, understandability, consistency, and usefulness of pension information for users of government financial reports.
+-   **GASB 67**: Provides guidelines for pension plan reporting, effective after June 15, 2013.
+-   **GASB 68**: Focuses on pension obligations for government employers, effective after June 15, 2014.
+-   **Blended Discount Rate** (1) long-term expected rate of return on plan investments to the extent that current and expected future plan net assets are projected to be sufficient to make benefit payments; and (2) a high-quality municipal bond index rate beyond the point at which plan net assets are projected to be fully depleted. 
+
+## Timeline of GASB Standards
+
+-   **2010**: On June 16, 2010, the Governmental Accounting Standing Boards (GASB) published a preliminary view on the issues related to Pension Accounting and Financial Reporting by Employers and request public comments by September 17, 2010. 
+-   **2012**: In June 2012, GASB issued Statements 67 and 68 to provide updated guidelines for pension systems (Statement 67) and government employers (Statement 68) to improve pension accounting and financial reporting
+-   **2013**: GASB 67 takes effect for fiscal years beginning after June 15, 2013
+-   **2014**: GASB 68 takes effect for fiscal years beginning after June 15, 2014
+
+## Literature review on major viewpoints on GASB 67 and 68. 
+
+
+-   Some anticipated outcomes of the new standards, such as a possible downward trend in discount rates and an increase in reported net liabilities (Aubry et al., 2017; Mortimer & Henderson, 2014; Weinberg & Norcross, 2017)
+-   Some studies identified some impacts of GASB 68 in making government financial reporting more transparent by increasing awareness of the financial costs of pension obligations (Dambra et al., 2023; Weinberg & Norcross, 2017).
+-   Some concerns on the effectiveness of the new standards in creating a universal accounting methods and assumptions for pension reporting (Allen & Petacchi, 2023; Schrager, 2024; Thornburg & Rosacker, 2018)
+-   Studies found that pension plans as well as the government-sponsoring those plans might adjust their funding policies or investment strategies changes following the introduction of GASB 67/68 (Allen & Petacchi, 2023; Mortimer & Henderson, 2014; Stalebrink & Donatella, 2021)
+
+## Research Questions
+
+1.  How have public pension plans' discount rates changed since GASB 67 and 68?
+2.  What impact have these standards had on pension liabilities and funded ratios?
+3.  How do well-funded and underfunded plans respond differently to these changes?
+
+## Data and Research Methods
+
+1. We use the 2013-2022 qualitative information hand collected from the pension plans Annual Comprehensive Financial Reports (ACFRs) to examine nuances in how public pension plans implement Standard 67
+2. We also use the Public Plan Database (PPD) for our descriptive and regression analysis to better understand the extent to which public pension plans changes their actuarial assumptions. 
+
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{Administor} & \textbf{Single} & \textbf{Agent} & \textbf{Cost-sharing} & \textbf{Total} & \textbf{Percentage (\%)} \\ \hline
+State               & 7               & 17            & 94                     & 118            & 56.19                    \\ \hline
+County              & 9               & 0             & 8                      & 17             & 8.09                     \\ \hline
+City                & 63              & 0             & 5                      & 68             & 32.38                    \\ \hline
+School              & 3               & 0             & 4                      & 7              & 3.33                     \\ \hline
+\textbf{Total}      & \textbf{83}     & \textbf{17}   & \textbf{110}           & \textbf{210}   & \textbf{100}             \\ \hline
+\end{tabular}%
+}
+\caption{Distribution of Public Pension Plans by Administrator Type}
+\end{table}
+
+## Change of Discount Rates
+
+![](graph_change.png){width=90%}
+
+## Plans that have changed the discount rates
+
+![](graph_plans.png){width=90%}
+
+## Change of Discount Rate by Types of Plan
+
+![](change_by_employer.png){width=90%}
+
+## Regression Equations
+
+**Equation 1**:
+    $$
+    Y_{st} = \beta_0 + \beta_1 \cdot \text{Post\_GASB67}_t + \beta_2 \cdot PC_{st} + \text{trend} + \nu_s + \epsilon_{st}
+    $$
+
+**Equation 2**:
+    $$
+    \begin{split}
+    Y_{st} = \delta_0 + \sum_{m=1}^{5} \delta_{-m} \cdot \text{GASB67}_{t-m} + \sum_{q=1}^{5} \delta_{+q} \cdot \text{GASB67}_{t+q} + \delta_2 \cdot PC_{st}\\
+    + \text{trend} + \nu_s + \epsilon_{st}
+    \end{split}
+    $$
+    
+## Variables
+
+-   **Dependent Variables**:
+    -   Blended Discount Rate (BDR)\
+    -   Rate of Return (ROR)\
+    -   Total Pension Liability (TPL)
+-   **Independent Variables**:
+    -   Post-GASB 67\
+    -   Plan Characteristics
+-   **Control Variables**:
+    -   Contribution Rate, Amortization Period, Asset Smoothing Period
+
+## Regression Results - Discount Rate
+
+-   Post GASB 67 led to:
+    -   A decrease in Blended Discount Rate (BDR) by 0.60 percentage points.
+    -   A decrease in Rate of Return (ROR) by 0.36 percentage points.
+
+## Regression Results - Liabilities and Funded Ratios
+
+-   Total Pension Liability (TPL) increased by 0.79% of payroll post GASB 67.
+-   Actuarial Liability (AL) increased by 0.48% of payroll.
+-   Funded ratios (FR_GASB67 and AFR) decreased, with FR_GASB67 showing a larger decline.
+
+## Conclusion
+
+-   Since the implementation of GASB 67 & 68, we observed a decreasing trend in the public pension plans’ discount rates. This impact is more pronounced in plans with insufficient funded ratios (<80%).
+-   Labilities reported under GASB 67 have increased compared to the period before its implementation, while the actuarial liabilities have also risen.
+-   The funded ratios reported under GASB 67 has declined, while the actuarial funded ratios are higher than the GASB 67 funded ratios. 
+-   We noticed that following the implementation of GASB 67/68, the long-term rate of return on investments has also decreased. 
+-   Using the qualitative information from plans’ ACFRs, we found some public pension plans have adjusted their funding policies (i.e contribution rates, or benefit formula) and increase pension funding level.  
+
+## Thank You
+
+Thank you for your attention!
