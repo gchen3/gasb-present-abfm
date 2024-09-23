@@ -85,30 +85,173 @@ School              & 3               & 0             & 4                      &
     + \text{trend} + \nu_s + \epsilon_{st}
     \end{split}
     $$
+**Equation 3**:
+    $$
+    Z_{st} = \gamma_0 + \gamma_1 \cdot \text{Post\_GASB67}_t + \gamma_2 \cdot PC_{st} + \text{trend} + \nu_s + \epsilon_{st}
+    $$
     
 ## Variables
 
 -   **Dependent Variables**:
-    -   Blended Discount Rate (BDR)\
-    -   Rate of Return (ROR)\
-    -   Total Pension Liability (TPL)
+    -   Blended Discount Rate (BDR) & Rate of Return (ROR)
+    -   Total Pension Liability (TPL) & Actuarial Liabilities (AL) 
+    -   GASB 67 funded ratio (FR_GASB67) & Actuarial Funded Ratio (AFR)
+    -   ("Z") Contribution Rate, Amortization Period, Asset Smoothing Period
 -   **Independent Variables**:
-    -   Post-GASB 67\
-    -   Plan Characteristics
+    -   Post-GASB 67 (2014 as the first year)
 -   **Control Variables**:
-    -   Contribution Rate, Amortization Period, Asset Smoothing Period
+    -   plan characteristic variables: percent of required contribution paid, amortization period, asset smoothing period, normal cost rate, 5-year average investment return, retiree to worker ratio, open or closed amortization method, total membership (log), Social Security coverage (yes or no), open or closed plan, employment types (teachers, police and firefighter, or general public employees), and plan types (multi-employer plans and single plans)
 
-## Regression Results - Discount Rate
+## Variable Definitions
 
--   Post GASB 67 led to:
-    -   A decrease in Blended Discount Rate (BDR) by 0.60 percentage points.
-    -   A decrease in Rate of Return (ROR) by 0.36 percentage points.
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|p{12cm}|}
+\hline
+\textbf{Variables}                & \textbf{Definitions}                                                 \\ \hline
+Blended Discount Rate (BDR)       & Blended discount rate * 100                                          \\ \hline
+Rate of Return (ROR)              & Long-term investment rate of return * 100                            \\ \hline
+Total Pension Liability (TPL)     & Total pension liability / payroll * 100                              \\ \hline
+Actuarial Liability (AL)          & Actuarial Liability / payroll * 100                                  \\ \hline
+Funded Ratio (FR) GASB67          & Funded ratio based on TLP (\%)                                       \\ \hline
+Actuarial Funded Ratio (AFR)      & Funded ratio based on AL (\%)                                        \\ \hline
+ADC paid                          & Percent of required contribution paid                                \\ \hline
+Amortization (AMORT)              & Remaining amortization period for unfunded liabilities (years)       \\ \hline
+Asset Smoothing (SMOOTH)          & Asset Smoothing Period (years)                                       \\ \hline
+Normal Cost Rate                  & Total normal cost / payroll                                          \\ \hline
+5-year Return Rate                & Average of 5-year returns (\%)                                       \\ \hline
+Retiree-to-worker ratio           & Total beneficiaries / total active members                           \\ \hline
+Open Amortization                 & Open amortization funding method (Yes=1; No=0)                       \\ \hline
+Membership (log)                  & Total number of members (log)                                        \\ \hline
+Social Security Coverage          & Plan members are covered by Social Security (Yes=1; No=0)            \\ \hline
+Closed Plans                      & Plans are closed to new members (Yes=1; No=0)                        \\ \hline
+Teachers’ Retirement Plans        & Whether the plan type is Teachers’ Retirement System                 \\ \hline
+Police and Fire Plans             & Whether the plan type is Public Safety Plan (Yes=1; No=0)            \\ \hline
+Single Employer Plans             & Whether the plan is a single employer plan (Yes=1; No=0)             \\ \hline
+\end{tabular}%
+}
+\caption{Variable Definitions for Public Pension Plan Analysis}
+\end{table}
 
-## Regression Results - Liabilities and Funded Ratios
+## Results - Discount Rate, Liabilities and Funded Ratios
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+\textbf{VARIABLES} & \textbf{BDR} & \textbf{ROR} & \textbf{TPL} & \textbf{AL} & \textbf{FR\_GASB67} & \textbf{AFR} \\ \hline
+\textbf{Post GASB 67} & -0.60*** & -0.36*** & 0.79*** & 0.48*** & -6.33*** & -3.91*** \\ 
+ & (0.06) & (0.04) & (0.12) & (0.09) & (1.04) & (0.90) \\ \hline
+\textbf{Normal Cost Rate} & -1.08 & -2.22*** & 9.77*** & 10.03*** & -13.20 & -23.50 \\ 
+ & (0.72) & (0.55) & (2.86) & (1.96) & (18.63) & (18.36) \\ \hline
+\textbf{ADC paid} & 0.00 & -0.15* & -0.42** & -0.25 & 7.74*** & 6.96*** \\ 
+ & (0.10) & (0.08) & (0.20) & (0.17) & (2.39) & (2.42) \\ \hline
+\textbf{5-year Return Rate} & 0.02*** & 0.01*** & -0.01* & -0.01 & 1.10*** & 0.65*** \\ 
+ & (0.00) & (0.00) & (0.01) & (0.01) & (0.06) & (0.06) \\ \hline
+\textbf{Retiree-to-worker ratio} & -0.30*** & -0.45*** & 4.60*** & 4.70*** & -6.85** & -8.71** \\ 
+ & (0.11) & (0.12) & (0.41) & (0.40) & (3.32) & (3.70) \\ \hline
+\textbf{Amortization Period} & 0.00 & 0.01*** & -0.01 & -0.01 & -0.31*** & -0.27*** \\ 
+ & (0.00) & (0.00) & (0.01) & (0.01) & (0.09) & (0.08) \\ \hline
+\textbf{Asset Smoothing Period} & -0.01 & -0.01 & 0.06 & 0.06 & -0.79** & -0.81** \\ 
+ & (0.02) & (0.02) & (0.04) & (0.04) & (0.40) & (0.40) \\ \hline
+\textbf{Open Amortization} & -0.00 & 0.15*** & 0.11 & -0.02 & 3.03*** & 4.20*** \\ 
+ & (0.05) & (0.04) & (0.13) & (0.11) & (1.04) & (0.91) \\ \hline
+\textbf{Observations} & 2,630 & 2,630 & 2,630 & 2,630 & 2,630 & 2,630 \\ \hline
+\textbf{R-squared} & 0.253 & 0.270 & 0.731 & 0.766 & 0.210 & 0.169 \\ \hline
+\textbf{Control Variables} & Yes & Yes & Yes & Yes & Yes & Yes \\ \hline
 
--   Total Pension Liability (TPL) increased by 0.79% of payroll post GASB 67.
--   Actuarial Liability (AL) increased by 0.48% of payroll.
--   Funded ratios (FR_GASB67 and AFR) decreased, with FR_GASB67 showing a larger decline.
+\end{tabular}%
+}
+\caption*{Robust standard errors in parentheses. *** p<0.01, ** p<0.05, * p<0.1}
+\end{table}
+
+## Results - Event Study
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+\textbf{VARIABLES} & \textbf{BDR} & \textbf{ROR} & \textbf{TPL} & \textbf{AL} & \textbf{FR\_GASB67} & \textbf{AFR} \\ \hline
+\textbf{Pre GASB 67 (t-4)} & 0.25*** & 0.20*** & -0.50*** & -0.35*** & 6.85*** & 5.42*** \\ 
+ & (0.05) & (0.03) & (0.12) & (0.07) & (0.98) & (0.87) \\ \hline
+\textbf{Pre GASB 67 (t-3)} & 0.16*** & 0.12*** & -0.34*** & -0.23*** & 4.73*** & 3.72*** \\ 
+ & (0.04) & (0.02) & (0.08) & (0.05) & (0.74) & (0.60) \\ \hline
+\textbf{Pre GASB 67 (t-2)} & 0.13** & 0.08*** & -0.21* & -0.05 & 4.20*** & 2.15*** \\ 
+ & (0.06) & (0.03) & (0.12) & (0.05) & (0.91) & (0.74) \\ \hline
+\textbf{GASB 67 (t)} & -0.24*** & -0.06 & 0.28 & 0.02 & -0.58 & -0.91 \\ 
+ & (0.09) & (0.04) & (0.18) & (0.06) & (1.21) & (0.88) \\ \hline
+\textbf{Post GASB 67 (t+1)} & -0.34*** & -0.10*** & 0.44*** & 0.11** & -1.70* & 0.82 \\ 
+ & (0.08) & (0.03) & (0.17) & (0.05) & (0.97) & (0.72) \\ \hline
+\textbf{Post GASB 67 (t+2)} & -0.46*** & -0.17*** & 0.56*** & 0.23*** & -3.10*** & 1.63*** \\ 
+ & (0.08) & (0.03) & (0.11) & (0.06) & (0.84) & (0.55) \\ \hline
+\textbf{Post GASB 67 (t+3)} & -0.60*** & -0.31*** & 0.53*** & 0.25*** & -1.51 & 0.96 \\ 
+ & (0.07) & (0.04) & (0.10) & (0.07) & (1.00) & (0.83) \\ \hline
+\textbf{Post GASB 67 (t+4)} & -0.56*** & -0.40*** & 0.45*** & 0.31*** & 0.15 & 1.63** \\ 
+ & (0.06) & (0.03) & (0.10) & (0.08) & (0.94) & (0.80) \\ \hline
+\textbf{Observations} & 1,717 & 1,717 & 1,717 & 1,717 & 1,717 & 1,717 \\ \hline
+\textbf{R-squared} & 0.255 & 0.301 & 0.730 & 0.769 & 0.119 & 0.0733 \\ \hline
+\textbf{Control Variables} & Yes & Yes & Yes & Yes & Yes & Yes \\ \hline
+\end{tabular}%
+}
+\caption*{Robust standard errors in parentheses. *** p<0.01, ** p<0.05, * p<0.1}
+\end{table}
+
+## Results by funded status
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{VARIABLES} & \textbf{BDR (>=80\% Funding)} & \textbf{TPL (>=80\% Funding)} & \textbf{BDR (<80\% Funding)} & \textbf{TPL (<80\% Funding)} \\ \hline
+\textbf{Post GASB 67} & -0.02 & 0.33*** & -0.31*** & 0.64*** \\ 
+ & (0.06) & (0.11) & (0.09) & (0.16) \\ \hline
+\textbf{Normal Cost Rate} & -2.54*** & 9.60*** & -0.75 & 9.84*** \\ 
+ & (0.70) & (2.74) & (0.65) & (3.70) \\ \hline
+\textbf{ADC paid} & 0.03 & -1.07*** & 0.13 & -0.25 \\ 
+ & (0.15) & (0.33) & (0.12) & (0.24) \\ \hline
+\textbf{5-year Return Rate} & 0.00 & -0.01 & 0.01* & -0.00 \\ 
+ & (0.00) & (0.01) & (0.00) & (0.01) \\ \hline
+\textbf{Retirees to Active Ratio} & 0.32** & 5.84*** & -0.06 & 4.05*** \\ 
+ & (0.14) & (0.64) & (0.09) & (0.42) \\ \hline
+\textbf{Amortization Period} & 0.00 & -0.00 & -0.00 & -0.00 \\ 
+ & (0.00) & (0.01) & (0.00) & (0.01) \\ \hline
+\textbf{Asset Smoothing Period} & 0.00 & -0.13** & -0.01 & 0.12** \\ 
+ & (0.02) & (0.06) & (0.02) & (0.06) \\ \hline
+\textbf{Open Amortization} & -0.06 & 0.15 & -0.05 & 0.16 \\ 
+ & (0.10) & (0.18) & (0.06) & (0.16) \\ \hline
+\textbf{Observations} & 733 & 733 & 1,897 & 1,897 \\ \hline
+\textbf{R-squared} & 0.297 & 0.787 & 0.359 & 0.702 \\ \hline
+\textbf{Number of plans} & 55 & 55 & 127 & 127 \\ \hline
+\textbf{Control Variables} & Yes & Yes & Yes & Yes  \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+## Additional findings AMORT, SMOOTH, and ADC Paid
+\begin{table}[h!]
+\centering
+\footnotesize
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{VARIABLES} & \textbf{AMORT} & \textbf{SMOOTH} & \textbf{ADC Paid} \\ \hline
+\textbf{Post GASB 67} & -0.94** & 0.20** & 0.06*** \\ 
+ & (0.44) & (0.09) & (0.01) \\ \hline
+\textbf{Normal Cost Rate} & -4.84 & 1.01 & -0.26 \\ 
+ & (6.16) & (1.33) & (0.19) \\ \hline
+\textbf{5-year Return Rate} & -0.05* & -0.02*** & 0.00 \\ 
+ & (0.03) & (0.01) & (0.00) \\ \hline
+\textbf{Retiree-to-worker Ratio} & -0.99 & 0.31 & 0.06** \\ 
+ & (1.04) & (0.30) & (0.02) \\ \hline
+\textbf{Open Amortization} & 1.66*** & 0.16 & -0.04* \\ 
+ & (0.53) & (0.11) & (0.02) \\ \hline
+\textbf{Observations} & 2,630 & 2,630 & 2,630 \\ \hline
+\textbf{R-squared} & 0.144 & 0.0308 & 0.0954 \\ \hline
+\textbf{Number of plans} & 182 & 182 & 182 \\ \hline
+\textbf{Control Variables} & Yes & Yes & Yes \\ \hline
+\end{tabular}%
+\caption*{Robust standard errors in parentheses. *** p<0.01, ** p<0.05, * p<0.1}
+\end{table}
 
 ## Conclusion
 
