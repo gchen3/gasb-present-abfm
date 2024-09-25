@@ -12,7 +12,7 @@ subtitle: "Sponsored by GASB Gil Crain Research Grant"
 ---
 
 ## Background about GASB 67 and 68
--   Statements 67 and 68 establish standards for measuring and recognizing net pension liabilities, enhancing the transparency, understandability, consistency, and usefulness of pension information for users of government financial reports.
+-   Statements 67 and 68 establish standards for measuring and recognizing net pension liabilities, which enhance the transparency, understandability, consistency, and usefulness of pension information for users of government financial reports.
 -   **GASB 67**: Provides guidelines for pension plan reporting, effective after June 15, 2013.
 -   **GASB 68**: Focuses on pension obligations for government employers, effective after June 15, 2014.
 -   **Blended Discount Rate** (1) long-term expected rate of return on plan investments to the extent that current and expected future plan net assets are projected to be sufficient to make benefit payments; and (2) a high-quality municipal bond index rate beyond the point at which plan net assets are projected to be fully depleted. 
@@ -24,13 +24,12 @@ subtitle: "Sponsored by GASB Gil Crain Research Grant"
 -   **2013**: GASB 67 takes effect for fiscal years beginning after June 15, 2013
 -   **2014**: GASB 68 takes effect for fiscal years beginning after June 15, 2014
 
-## Literature review on major viewpoints on GASB 67 and 68. 
+## Literature review on major viewpoints on GASB 67 and 68
 
-
--   Some anticipated outcomes of the new standards, such as a possible downward trend in discount rates and an increase in reported net liabilities (Aubry et al., 2017; Mortimer & Henderson, 2014; Weinberg & Norcross, 2017)
--   Some studies identified some impacts of GASB 68 in making government financial reporting more transparent by increasing awareness of the financial costs of pension obligations (Dambra et al., 2023; Weinberg & Norcross, 2017).
--   Some concerns on the effectiveness of the new standards in creating a universal accounting methods and assumptions for pension reporting (Allen & Petacchi, 2023; Schrager, 2024; Thornburg & Rosacker, 2018)
--   Studies found that pension plans as well as the government-sponsoring those plans might adjust their funding policies or investment strategies changes following the introduction of GASB 67/68 (Allen & Petacchi, 2023; Mortimer & Henderson, 2014; Stalebrink & Donatella, 2021)
+-   Some anticipated outcomes of the new standards, such as a downward trend in discount rates and an increase in reported net liabilities (Aubry et al., 2017; Mortimer & Henderson, 2014; Weinberg & Norcross, 2017)
+-   Some studies identified impacts of GASB 68 in making government financial reporting more transparent by increasing awareness of the financial costs of pension obligations (Dambra et al., 2023; Weinberg & Norcross, 2017).
+-   Some concerns on the effectiveness of new standards in creating a universal accounting methods and assumptions for pension reporting (Allen & Petacchi, 2023; Schrager, 2024; Thornburg & Rosacker, 2018)
+-   Studies found that pension plans and the government sponsoring those plans might adjust their funding policies or investment strategies following the introduction of GASB 67/68 (Allen & Petacchi, 2023; Mortimer & Henderson, 2014; Stalebrink & Donatella, 2021)
 
 ## Research Questions
 
@@ -59,7 +58,7 @@ School              & 3               & 0             & 4                      &
 \caption{Distribution of Public Pension Plans by Administrator Type}
 \end{table}
 
-## Change of Discount Rates
+## Change of Blended Discount Rates and Rate of Return Assumptions
 
 ![](graph_change.png){width=90%}
 
@@ -96,11 +95,12 @@ School              & 3               & 0             & 4                      &
     -   Blended Discount Rate (BDR) & Rate of Return (ROR)
     -   Total Pension Liability (TPL) & Actuarial Liabilities (AL) 
     -   GASB 67 funded ratio (FR_GASB67) & Actuarial Funded Ratio (AFR)
-    -   ("Z") Contribution Rate, Amortization Period, Asset Smoothing Period
+    -   Contribution Rate, Amortization Period, Asset Smoothing Period
 -   **Independent Variables**:
     -   Post-GASB 67 (2014 as the first year)
--   **Control Variables**:
-    -   plan characteristic variables: percent of required contribution paid, amortization period, asset smoothing period, normal cost rate, 5-year average investment return, retiree to worker ratio, open or closed amortization method, total membership (log), Social Security coverage (yes or no), open or closed plan, employment types (teachers, police and firefighter, or general public employees), and plan types (multi-employer plans and single plans)
+-   **Control Variables: plan characteristic variables**:
+    - percent of required contribution paid, amortization period, asset smoothing period, normal cost rate, 5-year average investment return, 
+    - retiree to worker ratio, open or closed amortization method, total membership (log), Social Security coverage (yes or no), open or closed plan, employment types (teachers, police and firefighter, or general public employees), and plan types (multi-employer plans and single plans)
 
 ## Variable Definitions
 
@@ -194,7 +194,6 @@ Single Employer Plans             & Whether the plan is a single employer plan (
 \textbf{Control Variables} & Yes & Yes & Yes & Yes & Yes & Yes \\ \hline
 \end{tabular}%
 }
-\caption*{Robust standard errors in parentheses. *** p<0.01, ** p<0.05, * p<0.1}
 \end{table}
 
 ## Results by funded status
@@ -263,4 +262,12 @@ Single Employer Plans             & Whether the plan is a single employer plan (
 
 ## Thank You
 
-Thank you for your attention!
+Thank you for your attention! Questions and Comments are welcome!
+
+Trang Hoang 
+[tranghoang@unomaha.edu](mailto:tranghoang@unomaha.edu)
+
+Gang Chen 
+[gchen3@albany.edu](mailto:gchen3@albany.edu)
+
+
